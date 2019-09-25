@@ -21,10 +21,10 @@ public class SendMailController {
     @GetMapping("/send")
     public String Hello( Model model){
         //发送人
-        String to = "shibo960830@163.com";
+        String to = "******";
         List<String> ccList = new ArrayList<>();
-        ccList.add("785292960@qq.com");
-        ccList.add("756274132@qq.com");
+        ccList.add("******");
+        ccList.add("******");
         //抄送
         String[] cc = ccList.toArray(new String[ccList.size()]);
         //标题
@@ -33,8 +33,8 @@ public class SendMailController {
         String content = "这是一场SpringBoot发送邮件功能测试!";
         //附件
         List<String> files = new ArrayList<>();
-        files.add("C:\\Users\\Administrator\\Desktop\\noID.zip");
-        files.add("C:\\Users\\Administrator\\Desktop\\0477bfe12d92e29787f00922986b665b.jpg");
+        files.add("******");
+        files.add("******");
         String[] filepath =files.toArray(new String[files.size()]);
         mailUtil.sendMail(to,title,content,cc,filepath);
         //压缩文件测试
