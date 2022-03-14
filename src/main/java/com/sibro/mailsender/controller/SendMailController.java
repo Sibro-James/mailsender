@@ -17,6 +17,11 @@ public class SendMailController {
     @Autowired
     private CompressUtil compressUtil;//压缩包工具类
 
+    @GetMapping("/hello")
+    public String sayHi() {
+        return "hello world!";
+    }
+
 
     @GetMapping("/send")
     public String Hello( Model model){
